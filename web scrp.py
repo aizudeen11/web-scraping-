@@ -16,7 +16,7 @@ class web_scrap:
         webtable_df = pd.read_html(driver.find_element_by_xpath("//table[@id='tableStatDiv']"))[0]
         # The pandas read_html() function is a quick and convenient way to turn an HTML table into a pandas DataFrame
         print(webtable_df)
-        # webtable_df.to_csv('FOREIGN TRADE TURNOVER, EXPORTS and IMPORTS, BALANCE, by month (cumulative) and year.csv')
+        webtable_df.to_csv('FOREIGN TRADE TURNOVER, EXPORTS and IMPORTS, BALANCE, by month (cumulative) and year.csv')
     
     def WebScrap0(self):
         driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -36,4 +36,4 @@ class web_scrap:
 web = web_scrap()
 
 web.WebScrap()   
-# web.WebScrap0()
+web.WebScrap0()
